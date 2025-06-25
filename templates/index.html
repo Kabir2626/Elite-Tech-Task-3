@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analyzer</title>
+</head>
+<body>
+    <!-- Page Title -->
+    <h1>Movie Review Sentiment Analysis</h1>
+
+    <!-- Form that sends POST request to /predict -->
+    <form action="/predict" method="post">
+        <!-- Text input for review -->
+        <textarea name="review" rows="5" cols="60" placeholder="Type your review here..."></textarea><br><br>
+
+        <!-- Submit button -->
+        <input type="submit" value="Predict">
+    </form>
+
+    <!-- Display the result only if it exists -->
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
+
